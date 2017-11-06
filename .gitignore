@@ -1,0 +1,6 @@
+pkg/
+.idea/
+.DS_Store
+Gemfile.lock
+doc/
+.yardoc/

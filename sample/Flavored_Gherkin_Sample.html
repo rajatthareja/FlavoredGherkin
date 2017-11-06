@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Flavored Gherkin Sample</title><link rel="icon" href="http://flavoredgherkin.rajatthareja.com/fg.ico">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" media="screen,projection"/>
+<link href="../css/flavored.gherkin.min.css" rel="stylesheet">
+</head><body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script><header class="brown lighten-5">
+<div class="row brown lighten-1">
+<div class="col m9 hide-on-small-only">
+<h5 id="title" class="truncate white-text tooltipped" data-tooltip="Flavored Gherkin Sample">
+<div id="loading-flavour" class="preloader-wrapper small active">
+<div class="spinner-layer spinner-blue-only">
+<div class="circle-clipper left">
+<div class="circle"></div>
+</div>
+<div class="gap-patch">
+<div class="circle"></div>
+</div>
+<div class="circle-clipper right">
+<div class="circle"></div>
+</div>
+</div>
+</div>
+Flavored Gherkin Sample
+</h5>
+</div><div class="col m3 s12 brown lighten-1">
+<ul class="tabs brown lighten-1">
+<li class="tab col s4">
+<a class="btn brown lighten-3 active blue-text waves-effect waves-light tooltipped" data-tooltip="Overview" href="#overview"><i class="material-icons">public</i></a>
+</li>
+<li class="tab col s4">
+<a class="btn brown lighten-3 white-text waves-effect waves-light tooltipped" data-tooltip="Features" href="#features"><i class="material-icons">view_headline</i></a>
+</li>
+<li class="tab col s4">
+<a class="btn brown lighten-3 white-text waves-effect waves-light tooltipped" data-tooltip="Summary" href="#summary"><i class="material-icons">view_comfy</i></a>
+</li>
+</ul>
+</div>
+</div>
+</header><main>
+<div class="row">
+<div class="col s12 m3">
+<table id="featuresCount" class="bordered">
+<tbody></tbody>
+</table>
+</div><div class="col s12 m3 offset-m6">
+<table id="scenariosCount" class="bordered">
+<tbody></tbody>
+</table>
+</div>
+</div><div class="row">
+<div id="overview" class="col s12">
+<div class="row">
+<div class="col s12">
+<canvas id="scenariosTagsChart"></canvas>
+</div>
+</div></div><div id="features" class="col s12">
+<ul class="collapsible popout features" data-collapsible="expandable"><li class="feature"><div class="collapsible-header waves-effect waves-light brown lighten-1 white-text">
+<i class="material-icons">featured_play_list</i>
+<b>Feature</b>&nbsp;This is a feature with table in step
+</div>
+<div class="collapsible-body brown lighten-5">
+<div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="f-tag tag-feature_tag">@feature_tag</span></div><pre>This is some description of feature
+1) do this
+2) do that</pre>
+<p>../testing/fixtures/features/feature.feature</p><ul class="collection scenarios">
+<li class="collection-item brown lighten-4 background"><b>Background</b>
+<ul class="steps"><li class="step"><b>Given </b> I am give step of some feature</li></ul>
+</li>
+<li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f0s1">
+<b>Scenario</b> I have table in one of my step
+</a>
+</li>
+<li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f0s2">
+<b>Scenario</b> I am some testing scenario of some functionality
+</a>
+</li>
+<li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f0s3">
+<b>Scenario</b> I am some other testing scenario of some functionality
+</a>
+</li>
+<li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f0s4">
+<b>Scenario</b> I am some testing scenario of other functionality
+</a>
+</li>
+</ul>
+</div>
+</li><li class="feature"><div class="collapsible-header waves-effect waves-light brown lighten-1 white-text">
+<i class="material-icons">featured_play_list</i>
+<b>Feature</b>&nbsp;I am some feature for testing some functionality
+</div>
+<div class="collapsible-body brown lighten-5"><p>../testing/fixtures/features/feature1.feature</p><ul class="collection scenarios"><li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f1s0">
+<b>Scenario</b> I am some testing scenario of some functionality
+</a>
+</li>
+<li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f1s1">
+<b>Scenario</b> I am some other testing scenario of some functionality
+</a>
+</li>
+<li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f1s2">
+<b>Scenario</b> I am some testing scenario with two tags of some functionality
+</a>
+</li>
+<li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f1s3">
+<b>Scenario</b> I am some testing scenario of other functionality
+</a>
+</li>
+</ul>
+</div>
+</li><li class="feature"><div class="collapsible-header waves-effect waves-light brown lighten-1 white-text">
+<i class="material-icons">featured_play_list</i>
+<b>Feature</b>&nbsp;I am some other feature for testing some functionality
+</div>
+<div class="collapsible-body brown lighten-5">
+<div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="f-tag tag-feature_tag">@feature_tag</span></div>
+<p>../testing/fixtures/features/feature2.feature</p><ul class="collection scenarios"><li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f2s0">
+<b>Scenario</b> I am some testing scenario of other functionality
+</a>
+</li>
+<li class="collection-item brown lighten-1 scenario-outline">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f2s1">
+<b>Scenario Outline</b> I am some testing scenario outline of other functionality
+</a>
+</li>
+<li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f2s2">
+<b>Scenario</b> I am some testing scenario of some functionality
+</a>
+</li>
+<li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f2s3">
+<b>Scenario</b> I am some other testing scenario of some functionality
+</a>
+</li>
+</ul>
+</div>
+</li><li class="feature"><div class="collapsible-header waves-effect waves-light brown lighten-1 white-text">
+<i class="material-icons">featured_play_list</i>
+<b>Feature</b>&nbsp;I am some other feature for testing some broken functionality
+</div>
+<div class="collapsible-body brown lighten-5"><p>../testing/fixtures/features/feature3.feature</p><ul class="collection scenarios"><li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f3s0">
+<b>Scenario</b> I am some failed testing scenario of some functionality
+</a>
+</li>
+<li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f3s1">
+<b>Scenario</b> I am some undefined testing scenario of some functionality
+</a>
+</li>
+<li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f3s2">
+<b>Scenario</b> I am some pending testing scenario of some functionality
+</a>
+</li>
+<li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f3s3">
+<b>Scenario</b> I am some testing scenario of some functionality
+</a>
+</li>
+<li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f3s4">
+<b>Scenario</b> I am some other testing scenario of some functionality
+</a>
+</li>
+</ul>
+</div>
+</li><li class="feature"><div class="collapsible-header waves-effect waves-light brown lighten-1 white-text">
+<i class="material-icons">featured_play_list</i>
+<b>Feature</b>&nbsp;I am some other feature for testing tag functionality
+</div>
+<div class="collapsible-body brown lighten-5"><p>../testing/fixtures/features/feature4.feature</p><ul class="collection scenarios"><li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f4s0">
+<b>Scenario</b> I am some testing scenario with two tags of some functionality
+</a>
+</li>
+<li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f4s1">
+<b>Scenario</b> I am some testing scenario with one tags of some functionality
+</a>
+</li>
+<li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f4s2">
+<b>Scenario</b> I am some testing scenario of some functionality
+</a>
+</li>
+<li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f4s3">
+<b>Scenario</b> I am some other testing scenario with watir screenshot
+</a>
+</li>
+<li class="collection-item brown lighten-1 scenario">
+<i class="material-icons white-text">ac_unit</i>&nbsp;
+<a class="modal-trigger waves-effect waves-light white-text" href="#f4s4">
+<b>Scenario</b> I am scenario with more steps
+</a>
+</li>
+</ul>
+</div>
+</li></ul>
+</div><div id="summary" class="col s12">
+<table id="summaryTable" class="bordered" width="100%">
+<thead class="brown lighten-1 white-text">
+<tr>
+<th>Feature</th>
+<th>Scenario</th>
+<th class="hide">Tags</th>
+</tr>
+</thead>
+<tbody><tr class="brown lighten-4"><td>
+This is a feature with table in step
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f0s1">I have table in one of my step</a>
+</td><td class="hide">@feature. </td>
+</tr><tr class="brown lighten-4"><td>
+This is a feature with table in step
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f0s2">I am some testing scenario of some functionality</a>
+</td><td class="hide">@high. </td>
+</tr><tr class="brown lighten-4"><td>
+This is a feature with table in step
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f0s3">I am some other testing scenario of some functionality</a>
+</td><td class="hide">@low. </td>
+</tr><tr class="brown lighten-4"><td>
+This is a feature with table in step
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f0s4">I am some testing scenario of other functionality</a>
+</td><td class="hide"></td>
+</tr>
+<tr class="brown lighten-4"><td>
+I am some feature for testing some functionality
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f1s0">I am some testing scenario of some functionality</a>
+</td><td class="hide">@high. </td>
+</tr><tr class="brown lighten-4"><td>
+I am some feature for testing some functionality
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f1s1">I am some other testing scenario of some functionality</a>
+</td><td class="hide">@low. </td>
+</tr><tr class="brown lighten-4"><td>
+I am some feature for testing some functionality
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f1s2">I am some testing scenario with two tags of some functionality</a>
+</td><td class="hide">@high. @last. </td>
+</tr><tr class="brown lighten-4"><td>
+I am some feature for testing some functionality
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f1s3">I am some testing scenario of other functionality</a>
+</td><td class="hide">@feature. </td>
+</tr>
+<tr class="brown lighten-4"><td>
+I am some other feature for testing some functionality
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f2s0">I am some testing scenario of other functionality</a>
+</td><td class="hide">@feature. </td>
+</tr><tr class="brown lighten-4"><td>
+I am some other feature for testing some functionality
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f2s1">I am some testing scenario outline of other functionality</a>
+</td><td class="hide">@feature. </td>
+</tr><tr class="brown lighten-4"><td>
+I am some other feature for testing some functionality
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f2s2">I am some testing scenario of some functionality</a>
+</td><td class="hide">@high. </td>
+</tr><tr class="brown lighten-4"><td>
+I am some other feature for testing some functionality
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f2s3">I am some other testing scenario of some functionality</a>
+</td><td class="hide">@low. </td>
+</tr>
+<tr class="brown lighten-4"><td>
+I am some other feature for testing some broken functionality
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f3s0">I am some failed testing scenario of some functionality</a>
+</td><td class="hide">@scenario. @screenshot. </td>
+</tr><tr class="brown lighten-4"><td>
+I am some other feature for testing some broken functionality
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f3s1">I am some undefined testing scenario of some functionality</a>
+</td><td class="hide">@wip. </td>
+</tr><tr class="brown lighten-4"><td>
+I am some other feature for testing some broken functionality
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f3s2">I am some pending testing scenario of some functionality</a>
+</td><td class="hide">@scenario. </td>
+</tr><tr class="brown lighten-4"><td>
+I am some other feature for testing some broken functionality
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f3s3">I am some testing scenario of some functionality</a>
+</td><td class="hide">@high. </td>
+</tr><tr class="brown lighten-4"><td>
+I am some other feature for testing some broken functionality
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f3s4">I am some other testing scenario of some functionality</a>
+</td><td class="hide">@low. </td>
+</tr>
+<tr class="brown lighten-4"><td>
+I am some other feature for testing tag functionality
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f4s0">I am some testing scenario with two tags of some functionality</a>
+</td><td class="hide">@high. @last. </td>
+</tr><tr class="brown lighten-4"><td>
+I am some other feature for testing tag functionality
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f4s1">I am some testing scenario with one tags of some functionality</a>
+</td><td class="hide">@feature. </td>
+</tr><tr class="brown lighten-4"><td>
+I am some other feature for testing tag functionality
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f4s2">I am some testing scenario of some functionality</a>
+</td><td class="hide">@high. @scenario. @feature. @more. </td>
+</tr><tr class="brown lighten-4"><td>
+I am some other feature for testing tag functionality
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f4s3">I am some other testing scenario with watir screenshot</a>
+</td><td class="hide">@low. </td>
+</tr><tr class="brown lighten-4"><td>
+I am some other feature for testing tag functionality
+</td><td class="hoverable">
+<a class="modal-trigger black-text" href="#f4s4">I am scenario with more steps</a>
+</td><td class="hide">@high. @more. @long. </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</main>
+<footer class="page-footer brown lighten-4">
+<div class="footer-copyright brown lighten-1">
+<div class="container">
+<span id="flavours">
+<span class="brown flavour chip selected"></span><span class="red flavour chip z-depth-5"></span><span class="pink flavour chip z-depth-5"></span><span class="purple flavour chip z-depth-5"></span><span class="deep-purple flavour chip z-depth-5"></span><span class="indigo flavour chip z-depth-5"></span><span class="blue flavour chip z-depth-5"></span><span class="cyan flavour chip z-depth-5"></span><span class="teal flavour chip z-depth-5"></span><span class="green flavour chip z-depth-5"></span><span class="orange flavour chip z-depth-5"></span><span class="deep-orange flavour chip z-depth-5"></span><span class="blue-grey flavour chip z-depth-5"></span></span>
+<a class="white-text text-lighten-4 right" href="http://flavoredgherkin.rajatthareja.com">Generated by Flavored Gherkin</a>
+</div>
+</div>
+</footer><div id="f0s1" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-feature">@feature</span></div>
+<h5>I have table in one of my step</h5><p>../testing/fixtures/features/feature.feature:11</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>When </b> I am step with options:
+<div class="row">
+<div class="col s6"><b>| </b>option1</div><div class="col s6"><b>| </b>value1</div></div><div class="row">
+<div class="col s6"><b>| </b>option2</div><div class="col s6"><b>| </b>value2</div></div>
+</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<div id="f0s2" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-high">@high</span></div>
+<h5>I am some testing scenario of some functionality</h5><p>../testing/fixtures/features/feature.feature:18</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>When </b> I am when step of some feature</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<div id="f0s3" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-low">@low</span></div>
+<h5>I am some other testing scenario of some functionality</h5><p>../testing/fixtures/features/feature.feature:23</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>And </b> I am give step of some other feature</li><li class="collection-item brown lighten-4 step"><b>When </b> I am when step of some other feature</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some other feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<div id="f0s4" class="modal modal-fixed-footer"><div class="modal-content">
+<h5>I am some testing scenario of other functionality</h5><p>../testing/fixtures/features/feature.feature:28</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>When </b> I am when step of some feature</li><li class="collection-item brown lighten-4 step"><b>And </b> I am when step which will fail</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div><div id="f1s0" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-high">@high</span></div>
+<h5>I am some testing scenario of some functionality</h5><p>../testing/fixtures/features/feature1.feature:4</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>Given </b> I am give step of some feature</li><li class="collection-item brown lighten-4 step"><b>When </b> I am when step of some feature</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<div id="f1s1" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-low">@low</span></div>
+<h5>I am some other testing scenario of some functionality</h5><p>../testing/fixtures/features/feature1.feature:10</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>Given </b> I am give step of some other feature</li><li class="collection-item brown lighten-4 step"><b>When </b> I am when step of some other feature</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some other feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<div id="f1s2" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-high">@high</span></div><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-last">@last</span></div>
+<h5>I am some testing scenario with two tags of some functionality</h5><p>../testing/fixtures/features/feature1.feature:16</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>Given </b> I am give step of some feature</li><li class="collection-item brown lighten-4 step"><b>When </b> I am when step of some other feature</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some this feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<div id="f1s3" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-feature">@feature</span></div>
+<h5>I am some testing scenario of other functionality</h5><p>../testing/fixtures/features/feature1.feature:22</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>Given </b> I am give step of some feature</li><li class="collection-item brown lighten-4 step"><b>When </b> I am when step of some feature</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div><div id="f2s0" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-feature">@feature</span></div>
+<h5>I am some testing scenario of other functionality</h5><p>../testing/fixtures/features/feature2.feature:5</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>Given </b> I am give step of some feature</li><li class="collection-item brown lighten-4 step"><b>When </b> I am when step of some feature</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<div id="f2s1" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-feature">@feature</span></div>
+<h5>I am some testing scenario outline of other functionality</h5><p>../testing/fixtures/features/feature2.feature:11</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>Given </b> I am give step of some other feature</li><li class="collection-item brown lighten-4 step"><b>When </b> I am when step of some other feature</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some <b>option</b> feature</li></ul><h5>Examples</h5>
+<div class="examples">
+<div class="row">
+<div class="col s1"></div><div class="col s11"><b>| option</b></div></div><div class="row example">
+<div class="col s1"></div><div class="col s11"><b>| </b> other</div></div><div class="row example">
+<div class="col s1"></div><div class="col s11"><b>| </b> this</div></div></div>
+</div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<div id="f2s2" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-high">@high</span></div>
+<h5>I am some testing scenario of some functionality</h5><p>../testing/fixtures/features/feature2.feature:21</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>Given </b> I am give step of some feature</li><li class="collection-item brown lighten-4 step"><b>When </b> I am when step which will fail</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<div id="f2s3" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-low">@low</span></div>
+<h5>I am some other testing scenario of some functionality</h5><p>../testing/fixtures/features/feature2.feature:27</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>Given </b> I am give step of some other feature</li><li class="collection-item brown lighten-4 step"><b>When </b> I am when step of some other feature</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some other feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div><div id="f3s0" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-scenario">@scenario</span></div><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-screenshot">@screenshot</span></div>
+<h5>I am some failed testing scenario of some functionality</h5><p>../testing/fixtures/features/feature3.feature:4</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>Given </b> I am give step of some feature</li><li class="collection-item brown lighten-4 step"><b>When </b> I am when step which will fail</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<div id="f3s1" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-wip">@wip</span></div>
+<h5>I am some undefined testing scenario of some functionality</h5><p>../testing/fixtures/features/feature3.feature:10</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>Given </b> I am give step of some other feature</li><li class="collection-item brown lighten-4 step"><b>When </b> I am when step of some other feature</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some undefined feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<div id="f3s2" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-scenario">@scenario</span></div>
+<h5>I am some pending testing scenario of some functionality</h5><p>../testing/fixtures/features/feature3.feature:16</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>Given </b> I am give step of some other feature</li><li class="collection-item brown lighten-4 step"><b>When </b> I am when step of some other feature</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some pending feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<div id="f3s3" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-high">@high</span></div>
+<h5>I am some testing scenario of some functionality</h5><p>../testing/fixtures/features/feature3.feature:22</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>Given </b> I am give step of some feature</li><li class="collection-item brown lighten-4 step"><b>When </b> I am when step of some feature</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<div id="f3s4" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-low">@low</span></div>
+<h5>I am some other testing scenario of some functionality</h5><p>../testing/fixtures/features/feature3.feature:28</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>Given </b> I am give step of some other feature</li><li class="collection-item brown lighten-4 step"><b>When </b> I am when step of some other feature</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some other feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div><div id="f4s0" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-high">@high</span></div><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-last">@last</span></div>
+<h5>I am some testing scenario with two tags of some functionality</h5><p>../testing/fixtures/features/feature4.feature:4</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>Given </b> I am give step of some feature</li><li class="collection-item brown lighten-4 step"><b>When </b> I am when step of some other feature</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some this feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<div id="f4s1" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-feature">@feature</span></div>
+<h5>I am some testing scenario with one tags of some functionality</h5><p>../testing/fixtures/features/feature4.feature:10</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>Given </b> I am give step of some other feature</li><li class="collection-item brown lighten-4 step"><b>When </b> I am when step of some other feature</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some other feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<div id="f4s2" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-high">@high</span></div><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-scenario">@scenario</span></div><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-feature">@feature</span></div><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-more">@more</span></div>
+<h5>I am some testing scenario of some functionality</h5><p>../testing/fixtures/features/feature4.feature:16</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>Given </b> I am give step of some feature</li><li class="collection-item brown lighten-4 step"><b>When </b> I am when step of some feature</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<div id="f4s3" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-low">@low</span></div>
+<h5>I am some other testing scenario with watir screenshot</h5><p>../testing/fixtures/features/feature4.feature:22</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>Given </b> I am give step of some other feature</li><li class="collection-item brown lighten-4 step"><b>When </b> I am when step of some other feature</li><li class="collection-item brown lighten-4 step"><b>And </b> I am step with watir screenshot</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some other feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<div id="f4s4" class="modal modal-fixed-footer"><div class="modal-content"><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-high">@high</span></div><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-more">@more</span></div><div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-long">@long</span></div>
+<h5>I am scenario with more steps</h5><p>../testing/fixtures/features/feature4.feature:29</p><ul class="collection steps"><li class="collection-item brown lighten-4 step"><b>Given </b> I am give step of some feature</li><li class="collection-item brown lighten-4 step"><b>And </b> I am give step of some other feature</li><li class="collection-item brown lighten-4 step"><b>When </b> I am when step of some feature</li><li class="collection-item brown lighten-4 step"><b>And </b> I am when step of some other feature</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some feature</li><li class="collection-item brown lighten-4 step"><b>Then </b> I am then step of some other feature</li></ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+$('#f0s1').modal();$('#f0s2').modal();$('#f0s3').modal();$('#f0s4').modal();
+$('#f1s0').modal();$('#f1s1').modal();$('#f1s2').modal();$('#f1s3').modal();
+$('#f2s0').modal();$('#f2s1').modal();$('#f2s2').modal();$('#f2s3').modal();
+$('#f3s0').modal();$('#f3s1').modal();$('#f3s2').modal();$('#f3s3').modal();$('#f3s4').modal();
+$('#f4s0').modal();$('#f4s1').modal();$('#f4s2').modal();$('#f4s3').modal();$('#f4s4').modal();
+});
+</script><script type="text/javascript" src="../js/flavored.gherkin.min.js"></script></body>
+</html>

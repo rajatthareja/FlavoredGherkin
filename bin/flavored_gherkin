@@ -1,0 +1,47 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+require_relative '../lib/flavored_gherkin'
+
+options = {}
+
+opt_parser = OptionParser.new do |opts|
+  opts.banner = "Usage: \n     flavored_gherkin [options]"
+  opts.separator 'Flavored Gherkin options:'
+
+  opts.on('-F', '--flavour FLAVOUR', String, 'Flavored Gherkin Flavour') do |flavour|
+    options[:flavour] = flavour
+  end
+
+  opts.on('-f', '--features FEATURE_PATH', String, 'Feature Files Path') do |feature_path|
+    options[:feature_path] = feature_path
+  end
+
+  opts.on('-i', '--in INPUT_PATH', String, 'Feature Files Path') do |input_path|
+    options[:input_path] = input_path
+  end
+
+  opts.on('-o', '--out OUTPUT_PATH', String, 'Flavored Gherkin Output Path') do |output_path|
+    options[:output_path] = output_path
+  end
+
+  opts.on('-t', '--title TITLE', String, 'Flavored Gherkin Title') do |title|
+    options[:title] = title
+  end
+
+  opts.separator 'Common options:'
+
+  opts.on_tail('-h', '--help', 'Show help') do
+    puts opts
+    exit
+  end
+
+  opts.on_tail('-v','--version', 'Show version') do
+    puts 'FlavoredGherkin v' + Gem.loaded_specs['flavored_gherkin'].version.to_s rescue puts "Something want wrong. \nUse 'gem list flavored_gherkin'"
+    exit
+  end
+end
+
+opt_parser.parse!(ARGV)
+
+FlavoredGherkin.build options

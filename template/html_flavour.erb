@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<%= get('head').result(binding) %>
+<body>
+<%= get('header').result(binding) %>
+<main>
+  <div class="row">
+    <div class="col s12 m3">
+      <table id="featuresCount" class="bordered">
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="col s12 m3 offset-m6">
+      <table id="scenariosCount" class="bordered">
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div id="overview" class="col s12">
+      <%= get('overview').result(binding) %>
+    </div>
+
+    <div id="features" class="col s12">
+      <ul class="collapsible popout features" data-collapsible="expandable">
+        <% gherkins.each_with_index do |gherkin, f| %>
+            <% fid = "f#{f}" %>
+            <% feature = gherkin[:feature] %>
+          <li class="feature"><%= get('feature').result(binding) %></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div id="summary" class="col s12">
+      <%= get('summary').result(binding) %>
+    </div>
+  </div>
+</main>
+<%= get('footer').result(binding) %>
+</body>
+</html>

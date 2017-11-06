@@ -1,0 +1,32 @@
+<div class="collapsible-header waves-effect waves-light brown lighten-1 white-text">
+  <i class="material-icons">featured_play_list</i>
+  <b><%= feature[:keyword] %></b>&nbsp;<%= feature[:name] %>
+</div>
+<div class="collapsible-body brown lighten-5">
+
+  <% feature[:tags].each do |tag| %>
+    <div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="f-tag tag-<%= tag[:name].gsub('@', '') %>"><%= tag[:name] %></span></div>
+  <% end %>
+
+  <% if feature[:description] %>
+      <pre><%= feature[:description] %></pre>
+  <% end %>
+
+  <p><%= gherkin[:file] %></p>
+
+  <ul class="collection scenarios">
+    <% feature[:children].each_with_index do |scenario, s| %>
+      <% if scenario[:type] == :Background%>
+          <li class="collection-item brown lighten-4 background"><%= get('background').result(binding) %></li>
+      <% else %>
+        <% sid = "#{fid}s#{s}"%>
+        <li class="collection-item brown lighten-1 <%= scenario[:type] == :ScenarioOutline ? 'scenario-outline' : 'scenario'%>">
+          <i class="material-icons white-text">ac_unit</i>&nbsp;
+          <a class="modal-trigger waves-effect waves-light white-text" href="#<%= sid %>">
+            <b><%= scenario[:keyword] %></b> <%= scenario[:name] %>
+          </a>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>

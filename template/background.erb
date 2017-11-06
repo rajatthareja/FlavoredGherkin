@@ -1,0 +1,6 @@
+<b><%= scenario[:keyword] %></b>
+<ul class="steps">
+  <% scenario[:steps].each do |step| %>
+      <li class="step"><%= get('step').result(binding) %></li>
+  <% end %>
+</ul>

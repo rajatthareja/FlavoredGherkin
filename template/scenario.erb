@@ -1,0 +1,44 @@
+<div id="<%= sid %>" class="modal modal-fixed-footer">
+
+  <div class="modal-content">
+    <% scenario[:tags].each do |tag| %>
+        <div class="chip brown lighten-4"><i class="material-icons rotate-45">label</i><span class="s-tag tag-<%= tag[:name].gsub('@', '') %>"><%= tag[:name] %></span></div>
+    <% end %>
+
+    <h5><%= scenario[:name]%></h5>
+
+    <p><%= gherkin[:file] + ':' + scenario[:location][:line].to_s %></p>
+
+    <ul class="collection steps">
+      <% scenario[:steps].each do |step| %>
+          <li class="collection-item brown lighten-4 step"><%= get('step').result(binding) %></li>
+      <% end %>
+    </ul>
+    <% if scenario[:examples] %>
+      <% scenario[:examples].each do |example| %>
+        <% col_size = 11/example[:tableHeader][:cells].size %>
+        <h5><%= example[:keyword] %></h5>
+        <div class="examples">
+          <div class="row">
+            <div class="col s1"></div>
+            <% example[:tableHeader][:cells].each do |cell| %>
+              <div class="col s<%= col_size %>"><b>| <%= cell[:value] %></b></div>
+            <% end %>
+          </div>
+          <% example[:tableBody].each do |row| %>
+            <div class="row example">
+              <div class="col s1"></div>
+              <% row[:cells].each do |cell| %>
+                <div class="col s<%= col_size %>"><b>| </b> <%= cell[:value] %></div>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="modal-footer">
+    <span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<table id="summaryTable" class="bordered" width="100%">
+  <thead class="brown lighten-1 white-text">
+  <tr>
+    <th>Feature</th>
+    <th>Scenario</th>
+    <th class="hide">Tags</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% gherkins.each_with_index do |gherkin, f| %>
+      <% feature = gherkin[:feature] %>
+      <% feature[:children].each_with_index do |scenario, s| %>
+
+          <% next if scenario[:type] == :Background%>
+
+          <% sid = "f#{f}s#{s}" %>
+          <tr class="brown lighten-4">
+
+            <td>
+              <%= feature[:name] %>
+            </td>
+
+            <td class="hoverable">
+              <a class="modal-trigger black-text" href="#<%= sid %>"><%= scenario[:name] %></a>
+            </td>
+
+            <td class="hide">
+              <% scenario[:tags].each do |tag| %>
+                  <%= tag[:name] + '. ' %>
+              <% end %>
+            </td>
+          </tr>
+      <% end %>
+  <% end %>
+  </tbody>
+</table>
