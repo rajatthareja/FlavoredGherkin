@@ -1,10 +1,15 @@
 # Flavored Gherkin
 
-[![Gem Version](https://badge.fury.io/rb/flavored_gherkin.svg)](https://badge.fury.io/rb/flavored_gherkin) 
+[![Gem Version](https://badge.fury.io/rb/flavored_gherkin.svg)](https://badge.fury.io/rb/flavored_gherkin)
+[![Build status](https://travis-ci.org/rajatthareja/FlavoredGherkin.svg?branch=master)](https://travis-ci.org/rajatthareja/FlavoredGherkin)
+[![Windows Build status](https://ci.appveyor.com/api/projects/status/agvyur7bg5ul1444/branch/master?svg=true)](https://ci.appveyor.com/project/rajatthareja/flavoredgherkin)
+ 
 
-Ruby gem to convert gherkin feature files into html.
+Ruby gem to convert gherkin feature files into html flavour. 
 
 **[View Sample](http://flavoredgherkin.rajatthareja.com/sample/Flavored_Gherkin_Sample.html)**
+
+More flavours coming soon!
 
 ## Installation
 

@@ -2,7 +2,7 @@ Gem::Specification.new do |s|
   s.name        = 'flavored_gherkin'
   s.version     = '0.1'
   s.bindir      = 'bin'
-  s.summary     = 'Ruby gem to convert gherkin feature files into html.'
+  s.summary     = 'Ruby gem to convert gherkin feature files into html flavour.'
   s.description = ''
   s.authors     = ['Rajat Thareja']
   s.email       = 'rajat.thareja.1990@gmail.com'
