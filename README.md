@@ -1,4 +1,4 @@
-# Flavored Gherkin
+# FlavoredGherkin
 
 [![Gem Version](https://badge.fury.io/rb/flavored_gherkin.svg)](https://badge.fury.io/rb/flavored_gherkin)
 [![Build status](https://travis-ci.org/rajatthareja/FlavoredGherkin.svg?branch=master)](https://travis-ci.org/rajatthareja/FlavoredGherkin)
