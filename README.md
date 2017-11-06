@@ -9,7 +9,7 @@ Ruby gem to convert gherkin feature files into html flavour.
 
 **[View Sample](http://flavoredgherkin.rajatthareja.com/sample/Flavored_Gherkin_Sample.html)**
 
-More flavours coming soon!
+**More flavours coming soon!**
 
 ## Installation
 
