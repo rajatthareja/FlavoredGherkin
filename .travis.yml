@@ -1,0 +1,15 @@
+os:
+  - linux
+  - osx
+
+language: ruby
+rvm:
+  - 1.9.3
+  - 2.4.0
+  - jruby-9.1.7.0
+
+before_install:
+  # Using a recent version of bundler in order to avoid gem installation errors
+  - gem install bundler -v 1.15.4
+
+script: bundle exec rake flavored_gherkin:test_everything
