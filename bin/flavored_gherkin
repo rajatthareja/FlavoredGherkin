@@ -10,7 +10,7 @@ opt_parser = OptionParser.new do |opts|
   opts.separator 'Flavored Gherkin options:'
 
   opts.on('-F', '--flavour FLAVOUR', String, 'Flavored Gherkin Flavour') do |flavour|
-    options[:flavour] = flavour
+    options[:flavour] = flavour.capitalize
   end
 
   opts.on('-f', '--features FEATURE_PATH', String, 'Feature Files Path') do |feature_path|

@@ -5,9 +5,10 @@
 [![Windows Build status](https://ci.appveyor.com/api/projects/status/agvyur7bg5ul1444/branch/master?svg=true)](https://ci.appveyor.com/project/rajatthareja/flavoredgherkin)
  
 
-Ruby gem to convert gherkin feature files into html, pdf flavour.
+Ruby gem to convert gherkin feature files into html and pdf flavour.
 
 **[Html Flavour Sample](http://flavoredgherkin.rajatthareja.com/sample/Flavored_Gherkin_Sample.html)**
+
 **[Pdf Flavour Sample](http://flavoredgherkin.rajatthareja.com/sample/Flavored_Gherkin_Sample.pdf)**
 
 **More flavours coming soon!**

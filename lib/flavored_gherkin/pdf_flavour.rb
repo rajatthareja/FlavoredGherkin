@@ -7,7 +7,7 @@ module FlavoredGherkin
   #
   class PdfFlavour < Flavour
     ##
-    # Build Html Flavored Gherkin
+    # Build PDF Flavored Gherkin
     #
     def build(title, feature_files, output_path)
       info = {
