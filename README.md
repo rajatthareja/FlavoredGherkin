@@ -5,9 +5,10 @@
 [![Windows Build status](https://ci.appveyor.com/api/projects/status/agvyur7bg5ul1444/branch/master?svg=true)](https://ci.appveyor.com/project/rajatthareja/flavoredgherkin)
  
 
-Ruby gem to convert gherkin feature files into html flavour. 
+Ruby gem to convert gherkin feature files into html, pdf flavour.
 
-**[View Sample](http://flavoredgherkin.rajatthareja.com/sample/Flavored_Gherkin_Sample.html)**
+**[Html Flavour Sample](http://flavoredgherkin.rajatthareja.com/sample/Flavored_Gherkin_Sample.html)**
+**[Pdf Flavour Sample](http://flavoredgherkin.rajatthareja.com/sample/Flavored_Gherkin_Sample.pdf)**
 
 **More flavours coming soon!**
 
@@ -33,12 +34,13 @@ gem install flavored_gherkin
 | title                     | [String]    | 'Flavored Gherkin'         | Flavored Gherkin Title        |
 | feature_path / input_path | [String]    | Present Working Directory  | Feature Files Path            |
 | output_path               | [String]    | Present Working Directory  | Flavored Gherkin Output Path  |
+| flavour                   | [String]    | 'Html'                     | 'Html' or 'Pdf'               |
 
 ### Code Examples:
 
 ```ruby
 
-     require 'report_builder'
+     require 'flavored_gherkin'
     
     # Example 1:
     
@@ -73,6 +75,7 @@ gem install flavored_gherkin
     FlavoredGherkin.title = 'My Features'
     FlavoredGherkin.feature_path = 'myFolder/features'
     FlavoredGherkin.output_path  = 'myFolder/my_features'
+    FlavoredGherkin.flavour  = 'pdf'
     
     FlavoredGherkin.build
                 
@@ -85,6 +88,7 @@ gem install flavored_gherkin
 | -t, --source               | TITLE         | Flavored Gherkin Title         |
 | -f, --features / -i, --in  | FEATURE_PATH  | Feature Files Path             |
 | -o, --out                  | OUTPUT_PATH   | Flavored Gherkin Output Path   |
+| -F, --flavour              | FLAVOUR       | 'Html' or 'Pdf'                |
 
 ### CLI Example:
 

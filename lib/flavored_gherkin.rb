@@ -1,5 +1,6 @@
 require 'pathname'
 require_relative 'flavored_gherkin/html_flavour'
+require_relative 'flavored_gherkin/pdf_flavour'
 
 ##
 # Flavored Gherkin
@@ -49,7 +50,7 @@ module FlavoredGherkin
   #
   def self.flavour=(flavour)
     @options ||= {}
-    @options[:flavour] = flavour
+    @options[:flavour] = flavour.capitalize
   end
 
   ##
@@ -126,7 +127,7 @@ module FlavoredGherkin
     elsif options.is_a? Hash
       @options.merge! options
     end
-    const_get(flavour).new.build title, feature_files, output_path
+    const_get(flavour + 'Flavour').new.build title, feature_files, output_path
   end
 
   ##
@@ -136,7 +137,7 @@ module FlavoredGherkin
   #
   def self.flavour
     @options ||= {}
-    ['HtmlFlavour'].include?(@options[:flavour]) ? @options[:flavour] : 'HtmlFlavour'
+    %w[Html Pdf].include?(@options[:flavour]) ? @options[:flavour] : 'Html'
   end
 
   ##
@@ -146,7 +147,7 @@ module FlavoredGherkin
   #
   def self.title
     @options ||= {}
-    @options[:title] || (@options[:feature_path] || @options[:input_path] || 'Gherkin/Flavored').split('/').reverse[0..5].join(' ').gsub('.', '')
+    @options[:title] || (@options[:feature_path] || @options[:input_path] || 'Gherkin/Flavored').split('/').reverse[0..5].join(' ').delete('.')
   end
 
   ##
