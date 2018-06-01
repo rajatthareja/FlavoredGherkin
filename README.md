@@ -109,7 +109,7 @@ We're open to any contribution. It has to be tested properly though.
 
 ## Collaborators
 
-* [Rajat Thareja](http://rajatthareja.com)
+* [Rajat Thareja](https://rajatthareja.com)
 
 ## License
 
