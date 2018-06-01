@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.post_install_message = 'More flavours coming soon!'
   s.authors     = ['Rajat Thareja']
   s.email       = 'rajat.thareja.1990@gmail.com'
-  s.homepage    = 'http://flavoredgherkin.rajatthareja.com'
+  s.homepage    = 'https://flavoredgherkin.rajatthareja.com'
   s.license     = 'MIT'
   s.required_ruby_version = '>= 2.1'
 

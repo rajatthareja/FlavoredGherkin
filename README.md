@@ -7,9 +7,9 @@
 
 Ruby gem to convert gherkin feature files into html and pdf flavour.
 
-**[Html Flavour Sample](http://flavoredgherkin.rajatthareja.com/sample/Flavored_Gherkin_Sample.html)**
+**[Html Flavour Sample](https://flavoredgherkin.rajatthareja.com/sample/Flavored_Gherkin_Sample.html)**
 
-**[Pdf Flavour Sample](http://flavoredgherkin.rajatthareja.com/sample/Flavored_Gherkin_Sample.pdf)**
+**[Pdf Flavour Sample](https://flavoredgherkin.rajatthareja.com/sample/Flavored_Gherkin_Sample.pdf)**
 
 **More flavours coming soon!**
 
@@ -24,7 +24,7 @@ gem install flavored_gherkin
 ## Information
 
 * RDoc documentation [available on RubyDoc.info](http://www.rubydoc.info/gems/flavored_gherkin)
-* Source code [available on GitHub](http://github.com/rajatthareja/FlavoredGherkin)
+* Source code [available on GitHub](https://github.com/rajatthareja/FlavoredGherkin)
 
 ## Usage
 
