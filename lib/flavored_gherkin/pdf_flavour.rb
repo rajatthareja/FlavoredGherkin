@@ -90,8 +90,13 @@ module FlavoredGherkin
 
                   if step[:argument]
                     pdf.bounding_box([10, pdf.cursor], width: pdf.bounds.right) do
-                      step[:argument][:rows].each do |row|
-                        pdf.text('| ' + row[:cells].map { |cell| cell[:value] }.join(' | ') + ' |')
+                      if step[:argument][:rows]
+                        step[:argument][:rows].each do |row|
+                          pdf.text('| ' + row[:cells].map { |cell| cell[:value] }.join(' | ') + ' |')
+                        end
+                      end
+                      if step[:argument][:content]
+                        pdf.text step[:argument][:content], color: '3a5b93', style: :bold
                       end
                     end
                   end

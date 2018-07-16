@@ -1,11 +1,16 @@
 <b><%= step[:keyword] %></b> <%= ERB::Util.html_escape(step[:text]).gsub('&lt;', '<b>').gsub('&gt;', '</b>')%>
 <% if step[:argument]%>
-  <% step[:argument][:rows].each do |row| %>
+  <% if step[:argument][:rows] %>
+    <% step[:argument][:rows].each do |row| %>
     <div class="row">
       <% col_size = 12/row[:cells].size%>
       <% row[:cells].each do |cell| %>
-          <div class="col s<%= col_size %>"><b>| </b><%= cell[:value] %></div>
+        <div class="col s<%= col_size %>"><b>| </b><%= cell[:value] %></div>
       <% end %>
     </div>
+    <% end %>
+  <% end %>
+  <% if step[:argument][:content] %>
+    <div class="row">"""<%= step[:argument][:content] %>"""</div>
   <% end %>
 <% end %>
